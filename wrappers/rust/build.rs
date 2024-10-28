@@ -12,7 +12,7 @@ fn main() -> miette::Result<()> {
 			.define("ZXING_USE_BUNDLED_ZINT", "ON")
 			.define("CMAKE_CXX_STANDARD", "20")
 			.build();
-		dst.push("lib");
+		dst.push("lib64");
 		println!("cargo:rustc-link-search=native={}", dst.display());
 		println!("cargo:rustc-link-lib=static=ZXing");
 
